@@ -1,2 +1,5 @@
 # JavaSE
-lwq-javaSE1112222
+
+Java基础语法学习
+hehe
+奥里给!!
