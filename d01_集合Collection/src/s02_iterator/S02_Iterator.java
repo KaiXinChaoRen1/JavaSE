@@ -22,7 +22,7 @@ public class S02_Iterator {
 //            System.out.println(iterator.next());    //输出当前并后移
 //        }
 
-        //for循环中不能直接remove和add
+        //增强for和迭代器中不能直接使用<集合>的remove()和add()
 //        for (String s : list) {
 //            if ("b".equals(s)) {
 //                list.remove(s);
