@@ -11,31 +11,40 @@ import java.util.Iterator;
  */
 public class S02_Iterator {
     public static void main(String[] args) {
-        ArrayList<String> list =new ArrayList<>();
+        ArrayList<String> list = new ArrayList<>();
         list.add("a");
         list.add("b");
         list.add("b");
         list.add("c");
-        Iterator<String> iterator = list.iterator();  //创建出迭代器后，迭代器指向索引0处
 
-/*        //迭代器遍历
-        while (iterator.hasNext()){               //当前索引有无元素
-            System.out.println(iterator.next());    //输出当前并后移
-        }*/
+        //迭代器遍历(把next当成current就行,就是判断当前)
+//        while (iterator.hasNext()){               //当前索引有无元素
+//            System.out.println(iterator.next());    //输出当前并后移
+//        }
 
-/*        //常规方法删除多个元素
-        for (int i = 0; i < list.size(); i++) {
-            if("b".equals(list.get(i))){
-                list.remove(i);
-                i--;                    //因为集合删除后，后面的会往前补全，所以很费事
-            }
-        }*/
-        while (iterator.hasNext()){          //要先把前面的用迭代器遍历代码注释掉，因为前边遍历一遍 已经指向最后了
-            String s =iterator.next();
-            if ("b".equals(s)){
-                iterator.remove();
-            }
-        }
+        //for循环中不能直接remove和add
+//        for (String s : list) {
+//            if ("b".equals(s)) {
+//                list.remove(s);
+//            }
+//        }
+//        for (String s : list) {
+//            if ("b".equals(s)) {
+//                list.add("z");
+//            }
+//        }
+
+//        while (iterator.hasNext()){        //要先把前面的用迭代器遍历代码注释掉，因为前边遍历一遍 已经指向最后了
+//            String s =iterator.next();
+//            if ("b".equals(s)){
+//                iterator.remove();
+//            }
+//        }
+
+        //上面五行加上创建迭代器的一行代码可以转化为下面两行,连第一行注释都是idea自动转换的
+        //创建出迭代器后，迭代器指向索引0处
+        list.removeIf("b"::equals);
+
 
         System.out.println(list);
 
