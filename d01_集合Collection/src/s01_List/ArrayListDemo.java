@@ -6,13 +6,44 @@ import org.junit.jupiter.api.Test;
 import java.util.*;
 
 
-
 public class ArrayListDemo {
+    /**
+     * forEach
+     */
+    @Test
+    public void hehe3() {
+        ArrayList<String> myList = new ArrayList<>();
+        myList.add("aaa");
+        myList.add("bbb");
+        myList.add("ccc");
+
+        myList.forEach(o -> System.out.println(o));
+        System.out.println("-------------------------");
+
+        myList.stream().forEach(o -> System.out.println(o));
+        System.out.println("在网上看这两种方式差不多-------------------------");
+
+
+        //---------------------------------------------
+        myList.forEach(o->{
+            if(o.equals("bbb")){
+                myList.remove(o);           //不能直接调用集合本身的remove和add
+                myList.add("hehe");
+            }
+        });
+        myList.stream().forEach(o -> {
+            myList.add("hehe");
+        });
+        //-------------------------------------------------
+
+    }
+
+
     /**
      * clone(),属于浅拷贝
      */
     @Test
-    public  void  hehe2(){
+    public void hehe2() {
         People p1 = new People("李逵", 35);
         People p2 = new People("张飞", 35);
         ArrayList<People> l = new ArrayList<>();
@@ -32,11 +63,12 @@ public class ArrayListDemo {
 
 
     }
+
     /**
      * remove()
      */
     @Test
-    public void hehe1(){
+    public void hehe1() {
         People p1 = new People("李逵", 35);
         People p2 = new People("张飞", 35);
         People p3 = new People("八戒", 35);

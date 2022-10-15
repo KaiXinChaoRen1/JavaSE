@@ -2,6 +2,7 @@ package s04_Map;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
 import java.util.TreeMap;
 
 /**
@@ -29,6 +30,21 @@ import java.util.TreeMap;
  */
 public class MapDemo {
     public static void main(String[] args) {
+        HashMap<Integer, String> myHashMap = new HashMap<>();
+        myHashMap.put(1,"文强");
+        myHashMap.put(2,"龙弟");
+        myHashMap.put(3,"黄春");
+        System.out.println("直接打印Map==>"+myHashMap);
+
+        for (Integer integer : myHashMap.keySet()) {
+            System.out.println(myHashMap.get(integer));
+        }
+
+        Set<Map.Entry<Integer, String>> myEntries = myHashMap.entrySet();
+        for(Map.Entry<Integer,String>  myEntry: myEntries){
+            System.out.println("获取Entry的key==>"+myEntry.getKey());
+            System.out.println("获取Entry的value==>"+myEntry.getValue());
+        }
 
     }
 }

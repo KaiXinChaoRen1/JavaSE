@@ -6,27 +6,34 @@ import java.util.List;
 
 public class LinkedListDemo {
     public static void main(String[] args) {
-        ArrayList<Integer> al=new ArrayList<>();
-        for (int i = 0; i <5000000 ; i++) {
+        ArrayList<Integer> al = new ArrayList<>();
+        for (int i = 0; i < 5000000; i++) {
             al.add(i);
         }
         long start1 = System.currentTimeMillis();
         //al.remove(4000000);
-        al.add(10,404);
+        al.add(10, 404);
         long end1 = System.currentTimeMillis();
-        System.out.println("Arraylist增删时间"+(end1-start1));
+        System.out.println("Arraylist增删时间" + (end1 - start1));
 
         System.out.println("-----------------------------");
 
-        LinkedList<Integer> ll=new LinkedList<>();
-        for (int i = 0; i <5000000 ; i++) {
+        LinkedList<Integer> ll = new LinkedList<>();
+        for (int i = 0; i < 5000000; i++) {
             ll.add(i);
         }
         long start2 = System.currentTimeMillis();
         //ll.remove(4000000);
-        ll.add(10,404);
+        ll.add(10, 404);
         long end2 = System.currentTimeMillis();
-        System.out.println("Linkedlist增删时间"+(end2-start2));
+        System.out.println("Linkedlist增删时间" + (end2 - start2));
+
+
+        System.out.println("父类引用接收子类,不能调用子类的特有方法");
+        LinkedList<Integer> myLinkedList = new LinkedList<>();
+        myLinkedList.peekFirst();
+        List<Integer> myLinkedList2 = new LinkedList<>();
+        //myLinkedList2.peekFirst();
 
     }
 

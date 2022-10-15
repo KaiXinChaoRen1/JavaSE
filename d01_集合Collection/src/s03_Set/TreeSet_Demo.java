@@ -10,7 +10,7 @@ import java.util.TreeSet;
  *
  * 底层时TreeMap
  * TreeSet可对存储的数据进行排序
- *      自然排序：自定义类实现Comparable<>接口，并在其中复写方法
+ *      自然排序：自定义类实现'Comparable<自定义类>'接口，并在其中复写方法
  *      比较器排序：创建TreeSet使用带参构造，传入匿名内部类做参数
  */
 public class TreeSet_Demo {
