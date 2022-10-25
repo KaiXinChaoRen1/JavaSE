@@ -1,15 +1,10 @@
 package d01_API.p01_Math;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
 /**
  * 构造方法私有，来保证不能创建对象
  */
 public class MathDemo {
-    //111
+
     public static void main(String[] args) {
 
         System.out.println(Math.abs(-10)); // 绝对值
