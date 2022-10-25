@@ -23,5 +23,11 @@ public class MathDemo {
 
         System.out.println(Math.random()); // 返回值为double的正值，[0.0,1.0)
 
+        System.out.println(Math.sin(Math.PI/6));       //弧度制:360度=>2Π       
+        System.out.println(Math.cos(Math.PI/6));       //弧度制:360度=>2Π                   
+
+        System.out.println(Math.addExact(35,53));    //相加     
+ 
+
     }
 }
