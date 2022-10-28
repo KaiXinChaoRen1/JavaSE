@@ -28,7 +28,7 @@ public class OptionalDemo {
 
         //orElse()&o10.orElseGet();
         System.out.println("********************************************");
-        //在optional为空值的情况下orElse和orElseGet都会执行
+        //在optional为空值的情况下orElse和orElseGet都会执行方法
         Optional<String> o8 = Optional.empty();
         System.out.println(o8.orElse(method())); 
         System.out.println(o8.orElseGet(()->(method()))); 
