@@ -24,13 +24,15 @@ public class MethodReferanceDemo1 {
 
     // 主方法要调用的方法（参数为接口的实现类对象）
     public static void useInterMethod(MyInterface myInstance, Float f) {
-        //调用接口的实现方法
+        // 调用接口的实现方法
         String result = myInstance.method(f);
         System.out.println(result);
     }
 
+    interface MyInterface {     //放在外面需要注意不同命名
+        String method(Float f);
+    }
+
 }
 
-interface MyInterface {
-    String method(Float f);
-}
+
