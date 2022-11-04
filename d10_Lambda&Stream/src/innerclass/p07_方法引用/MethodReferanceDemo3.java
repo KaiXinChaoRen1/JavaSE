@@ -1,5 +1,8 @@
 package innerclass.p07_方法引用;
 
+/**
+ * 3.重写方法的方法体中只有一行代码,且这行代码是调用了第一个参数的的成员方法,同时将剩余的参数按照顺序传入,此时可以考虑方法引用
+ */
 public class MethodReferanceDemo3 {
     public static void main(String[] args) {
         //匿名内部类

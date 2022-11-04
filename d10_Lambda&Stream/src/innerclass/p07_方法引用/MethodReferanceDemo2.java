@@ -3,8 +3,8 @@ package innerclass.p07_方法引用;
 import java.util.ArrayList;
 import java.util.function.Consumer;
 
-/*
- *  2.方法体中只有一行代码,且是调用了某个对象的成员方法,同时把抽象方法的所有参数按顺序传入这个静态方法时,可以考虑使用方法引用 
+/**
+ *  2.方法体中只有一行代码,且是调用了某个对象的成员方法,同时把抽象方法的所有参数按顺序传入这个方法时,可以考虑使用方法引用
  */
 public class MethodReferanceDemo2 {
     public static void main(String[] args) {
