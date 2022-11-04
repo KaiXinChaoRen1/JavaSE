@@ -9,13 +9,13 @@ package innerclass.p06_lambda;
  * 4.匿名内部类 编译后会生成单独的.class字节码文件，
  *  lambda表达式字节码在运行时动态生成.
  */
-public class Test6 {
+public class LambadDemo {
     public static void main(String[] args) {
         //lambda方式实现
         useInterMethod((a, b) -> a + b);    //（有很多能省略的地方，背不下来）
 
         //匿名内部类实现
-        useInterMethod(new Inter() {
+        useInterMethod(new MyInterface() {
             @Override
             public double method(double a, double b) {
                 return a + b;
@@ -23,14 +23,14 @@ public class Test6 {
         });
     }
 
-    //方法（参数为接口）
-    public static void useInterMethod(Inter i) {
-        double result = i.method(12.7, 22.3);
+    //方法（参数为接口的实现类对象）
+    public static void useInterMethod(MyInterface myInstance) {
+        double result = myInstance.method(12.7, 22.3);
         System.out.println(result);
     }
 
 }
 
-interface Inter {
+interface MyInterface {
     double method(double a, double b);  //有参有返回值
 }
