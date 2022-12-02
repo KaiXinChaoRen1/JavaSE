@@ -1,6 +1,8 @@
 package com.d03_NIO.p02_ChannelDemo;
 
-import org.junit.Test;
+
+
+import org.junit.jupiter.api.Test;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;

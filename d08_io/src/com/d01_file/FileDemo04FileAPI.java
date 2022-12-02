@@ -2,9 +2,9 @@ package com.d01_file;
 
 import java.io.File;
 
-public class FileDemo99 {
+public class FileDemo04FileAPI {
     public static void main(String[] args) {
-        File f1 = new File("d:\\iioo\\qq水浒");
+        File f1 = new File("C:\\Users\\lwq\\Desktop\\io");
         System.out.println(f1.isDirectory());
         System.out.println(f1.isFile());
         System.out.println(f1.exists());
@@ -14,7 +14,7 @@ public class FileDemo99 {
 
         System.out.println("--------------------------------------------");
 
-        File f2 = new File("d:\\work");
+        File f2 = new File("C:\\Users\\lwq\\Desktop\\io");
         String[] sarr = f2.list();  //返回该目录下所有文件和目录名称
         for (String s1 : sarr) {
             System.out.println(s1);
