@@ -1,4 +1,4 @@
-package com.p01_枚举方法;
+package com.p01_每个枚举对象重写方法;
 
 
 public class EnumDemo {
